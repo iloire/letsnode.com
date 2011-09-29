@@ -1,12 +1,16 @@
-### About HowToNode.org
+### About this blog
 
-HowToNode.org is a community supported blog created by [Tim Caswell][]. The purpose of the blog is to teach how to do various tasks in [node.js][] as well as teach fundamental concepts that are needed to write effective code.
+This blog is about node.js and the cool stuff you can build with it.
 
-This site is powered by [Wheat][], a git based blogging engine written in [node.JS][].
+This blog is based on [howtonode][]. Howtonode's source code is available on [howtonode's github repository][]
 
-The content for this site is stored in a [git repository][] that anyone can fork, write an article, and send a pull request. If your article passes the quality standards it will be published and help support the greater node community.
+The source code of this blog is also available on [letsnode's github repository]. I pretty much added the [Twitter BootStrap CSS library] to the blog 
 
-[Tim Caswell]: http://creationix.com/
-[node.js]: http://nodejs.org/
-[Wheat]: http://github.com/creationix/wheat
-[git repository]: http://github.com/creationix/howtonode.org
+I will be posting here experiences and code of real projects I am developing by using node.js, express.js and NoSql databases like redis.
+
+Hope you also enjoy working with node as I do..	
+
+[howtonode]: https://howtonode.org
+[howtonode's github repository]: https://github.com/creationix/howtonode.org
+[letsnode's github repository]: https://github.com/iloire/letsnode.com
+[Twitter BootStrap CSS library]: http://twitter.github.com/bootstrap/

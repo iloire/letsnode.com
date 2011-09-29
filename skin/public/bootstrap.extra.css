@@ -1,0 +1,19 @@
+body {
+  padding-top: 60px !important;
+}
+
+.hero-unit{
+	padding:20px;
+}
+
+a{
+	color:#00438A;
+}
+
+a.visited{
+	color:#666666;
+}
+
+h3{
+	line-height:25px;
+}

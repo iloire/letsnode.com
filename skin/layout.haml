@@ -4,23 +4,27 @@
     %meta(http-equiv="content-type" content="text/html; charset=UTF-8")
     %title #{(title ? title + " - " : "")}How To Node - NodeJS
     %meta(name="description" content="Learn the zen of coding in NodeJS.")
-    %link(href="/volcano.css?v2" rel="stylesheet")
+    %link(href="/bootstrap.min.css" rel="stylesheet")
+    %link(href="/bootstrap.extra.css" rel="stylesheet")
     %link(href="/print.css" rel="stylesheet" media="print")
     %link(rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/feed.xml")
     %link(href="/favicon.ico" rel="icon" type="image/x-icon")
   %body
-    #container
-      #header
-        %a{href: "/"}
-          %h1
-            How To Node
-          %h2.tagline
-            The zen of coding in node.JS
-      = content
-      
-      #footer.clearfix
-        %p Site Design and code is &copy; 2010 to Tim Caswell under the MIT license. Content and articles are copyrighted to the individual authors. All code snippets used in the examples are in the public domain.
-        %p Wheat running on node #{process.version}
+
+  %div.topbar
+    %div.topbar-inner
+      %div.container-fluid
+        %h3 %a{href: "/"} Let's node!
+        %p.pull-right %a{href: "http://www.nodejs.org"} Visit node.js web site
+   .container
+     = content
+       %footer
+         %p &copy; Iván Loire |&nbsp;
+           %a{href:"http://www.iloire.com"}> www.iloire.com
+           | This blog is based on 
+           %a{href:"http://howtonode.org/"}> howtonode.org
+           | CSS styles created with
+           %a{href:"http://twitter.github.com/bootstrap/"}> Twitter BootStrap CSS library
     :script
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
       document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
