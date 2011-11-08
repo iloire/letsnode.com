@@ -1,6 +1,6 @@
 ### About this blog
 
-This blog is about node.js and the cool stuff you can build with it.
+This blog **is about node.js** and the cool stuff you can do with it.
 
 This blog is based on [howtonode][]. Howtonode's source code is available on [howtonode's github repository][]
 

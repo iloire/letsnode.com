@@ -35,7 +35,7 @@
 
   .row
     .span4
-      %h4 About the Author
+      %h4 about the author
       %img.thumbnail{src: gravitar(author.email) }
       %p 
       <strong>Name:</strong>
@@ -66,16 +66,9 @@
            %a{href: author.homepage} #{author.homepage}
       %p
       %p
-        %a.twitter-share-button{href:"http://twitter.com/share",data-count:"horizontal",data-via:"ivanloire"}
+        %a.twitter-share-button{href:"http://twitter.com/share",data-count:"none",data-via:"ivanloire"}
 
       %script{src:"http://platform.twitter.com/widgets.js"}
-
-      :if article.lastUpdated
-        %dl{title: article.lastUpdated}
-          %dt
-            Last Updated:
-          %dd
-            &= formatDate(article.lastUpdated, "%A, %B %e, %Y")
 
       :if article.node
         %dl
@@ -109,7 +102,7 @@
 
 
       :if article.related && article.related.length > 0
-       %h4 Related
+       %h4 from the author
        %ul
           :each related in article.related
             %li

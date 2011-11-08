@@ -1,8 +1,24 @@
-Title: Let's move!
+Title: intro: Let's move!
 Author: Ivan Loire
 Date: Wed Sept 27 2011 12:15:53 GMT-0700 (PDT)
 
 Hi all! New stack (node.js), new blog!
+
+###Setting up this blog
+
+Wasn't that hard (I promise):
+
+ * Buy a domain name (I used namecheap.com)
+ * Enroll de [Amazon EC2 free tier program](http://aws.amazon.com/es/free/) to get your Linux instance on Amazon Ec2 for free :D
+ * Get an [Amazon Elastic IP](http://aws.amazon.com/articles/1346) and point your domain to that IP (A record)
+ * Set up your environment:
+  * Install [node and npm by following this instructions](https://github.com/joyent/node/wiki/Installation)
+  * Clone [this blog repository](https://github.com/iloire/letsnode.com) (or whatever node app you would like to try) with git ()
+  * Run the blog by installing the node dependencies "npm install" and then running the blog "node /server/server.js"
+
+That wasn't that tough uh? I also changed the blog skin by adding [Twitter BootStrap CSS libraries](http://twitter.github.com/bootstrap/)
+
+###Coming next
 
 If you are new to node, you may find here interesting stuff for you to crack on (stay tunned)
 
