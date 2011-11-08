@@ -3,7 +3,9 @@ var Stack = require('stack'),
     Creationix = require('creationix'),
     Http = require('http');
 
+var port = parseInt(process.argv[2], 10) || 8080
+
 Http.createServer(Stack(
   Creationix.log(),
-  require('wheat')(process.env.JOYENT ? process.env.HOME + "/howtonode" : __dirname +"/..")
-)).listen(process.env.JOYENT ? 80 : 8080);
+  require('wheat')(__dirname +"/..")
+)).listen(port);
