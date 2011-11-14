@@ -1,46 +1,16 @@
-# HowToNode.org
+# LetsNode.com
 
-This is a community supported blog about how to program in nodejs.
+This blog **is about node.js** and the cool stuff you can do with it.
 
-This is powered by a new static blog engine written in node called [wheat][].
+This blog is based on [howtonode][]. Howtonode's source code is available on [howtonode's github repository][]
 
-To run a local version of the blog, simply install [wheat][] and it's dependencies, node.JS v0.1.101 or later.
+The source code of this blog is also available on [letsnode's github repository]. I pretty much added the [Twitter BootStrap CSS library] to the blog 
 
-If you have [spark][] installed, just type `spark` in this directory.  If not, append `.listen(3000)` right before the closing semicolon and run it with `node app.js`
+I will be posting here experiences and code of real projects I am developing by using node.js, express.js and NoSql databases like redis.
 
-You can get a working wheat environment out of the box with [ivy][].
+Hope you also enjoy working with node as I do..	
 
-[wheat]: http://github.com/creationix/wheat
-[ivy]: http://github.com/creationix/ivy
-[spark]: http://github.com/senchalabs/spark
-
-## Contributing
-
-The best way to contribute is to fork this repository and add your article.  If this is your first article, then please add an entry for yourself in the authors directory as well.
-
-### Article format
-
-Every article is a markdown file with some meta-data at the top of the file.
-
-    Title: Control Flow in Node Part II
-    Author: Tim Caswell
-    Date: Thu Feb 04 2010 02:24:35 GMT-0600 (CST)
-    Node: v0.1.91
-
-    I had so much fun writing the last article on control flow, that I decided to...
-
-    ## First section: Display JavaScript files
-    
-    * display contents of external JavaScript file (path is relative to .markdown file)
-    <test-code/test-file.js>
-
-    * display contents of external JavaScript file and evaluate its contents 
-    <test-code/evaluate-file.js*>
-
-    More content goes here.
-
-More docs to come soon...
-
-## Licensing
-
-All articles are copyright to the individual authors.  Authors can put notes about license and copyright on their individual bio pages if they wish.
+[howtonode]: https://howtonode.org
+[howtonode's github repository]: https://github.com/creationix/howtonode.org
+[letsnode's github repository]: https://github.com/iloire/letsnode.com
+[Twitter BootStrap CSS library]: http://twitter.github.com/bootstrap/

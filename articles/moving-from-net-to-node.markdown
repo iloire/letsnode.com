@@ -1,4 +1,4 @@
-Title: ch.1: Moving from Microsoft .NET to node.js
+Title: Moving from Microsoft .NET to node.js
 Author: Ivan Loire
 Date: Wed Sept 28 2011 12:15:53 GMT-0700 (PDT)
 

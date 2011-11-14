@@ -1,113 +1,119 @@
- .row
-   .span11
-     :if article.version
-       %a.sha-version{ href: "/#{article.version}/#{article.name}" } Static Version
-     %h1
-       #{article.title}
-       %p by
-         %a(href="http://www.twitter.com/#{article.author.twitter}")> #{article.author.name}
-         on 
-         &= formatDate(article.date, "%A, %B %e, %Y")
+%div.topbar
+  %div.topbar-inner
+    %div.container-fluid
+      %h3 %a{href: "/"} Let's node!
+      %p.pull-right %a{href: "http://www.nodejs.org"} Visit node.js official web site
 
-     = markdownEncode(article.markdown)
-     %hr{style:"clear:both"}
-     #disqus_thread.body
-     :script
-       var disqus_url = "http://www.letsnode.com/#{article.name}";
-     %script(src="http://disqus.com/forums/letsnodecom/embed.js" type="text/javascript")
-     %a(href="http://disqus.com/forums/letsnodecom/?url=ref")
-       View the discussion thread.
-     %a.dsq-brlink(href="http://disqus.com")
-       blog comments powered by
-       %span.logo-disqus
-         Disqus
-     :script
-       (function() {
-         var links = document.getElementsByTagName('a');
-         var query = '?';
-         for(var i = 0; i < links.length; i++) {
-           if(links[i].href.indexOf('#disqus_thread') >= 0) {
-             query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&amp;';
-           }
-         }
-         document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/howtonodeorg/get_num_replies.js' + query + '"></' + 'script>');
-       })();
+.sidebar.article
+  %h4 about the author
+  %img.thumbnail{src: gravitar(author.email) }
+  %p 
+  <strong>Name:</strong>
+      #{author.name}
+  :if author.github
+    %p
+    <strong>GitHub: </strong>
+         %span= github(author.github)
 
-  .row
-    .span4
-      %h4 about the author
-      %img.thumbnail{src: gravitar(author.email) }
-      %p 
-      <strong>Name:</strong>
-          #{author.name}
-      :if author.github
-        %p
-        <strong>GitHub: </strong>
-             %span= github(author.github)        
+  :if author.bitbucket
+    %p
+    <strong>BitBucket: </strong>
+         %span= bitbucket(author.bitbucket)        
 
-      :if author.bitbucket
-        %p
-        <strong>BitBucket: </strong>
-             %span= bitbucket(author.bitbucket)        
+  :if author.twitter
+    %p
+    <strong>Twitter: </strong>
+         %span= twitter(author.twitter)        
 
-      :if author.twitter
-        %p
-        <strong>Twitter: </strong>
-             %span= twitter(author.twitter)        
+  :if author.location
+    %p
+    <strong>Location: </strong>
+         %span= author.location
 
-      :if author.location
-        %p
-        <strong>Location: </strong>
-             %span= author.location
+  :if author.homepage
+    %p
+    <strong>www: </strong>
+       %a{href: author.homepage} #{author.homepage}
+  %p
+  %p
+    %a.twitter-share-button{href:"http://twitter.com/share",data-count:"none",data-via:"ivanloire"}
 
-      :if author.homepage
-        %p
-        <strong>www: </strong>
-           %a{href: author.homepage} #{author.homepage}
-      %p
-      %p
-        %a.twitter-share-button{href:"http://twitter.com/share",data-count:"none",data-via:"ivanloire"}
+  %script{src:"http://platform.twitter.com/widgets.js"}
 
-      %script{src:"http://platform.twitter.com/widgets.js"}
+  :if article.node
+    %dl
+      %dt
+        Node Version:
+      %dd
+        %a{ href: "http://github.com/joyent/node/tree/" + article.node }
+          node #{article.node}
 
-      :if article.node
-        %dl
-          %dt
-            Node Version:
-          %dd
-            %a{ href: "http://github.com/joyent/node/tree/" + article.node }
-              node #{article.node}
-
-      :if article.dependencies
-        %dl
-          %dt
-            Dependency Versions:
-          %dd
-            %ul
-              :each dependency in article.dependencies
-                %li
-                  %a{ href: "http://github.com/creationix/haml-js/tree/8ea2df3a90ff488ed253d5872e0f4a387f393e5d" }
-                    haml-js v0.2.2
-
-      :if article.uniqueSnippets
-        %dl
-          %dt
-            Code Samples:
-          %dd
-            %ul
-              :each base, snippet in article.uniqueSnippets
-                %li
-                  %a{ href: snippet.filename}
-                    &= base
-
-
-      :if article.related && article.related.length > 0
-       %h4 from the author
-       %ul
-          :each related in article.related
+  :if article.dependencies
+    %dl
+      %dt
+        Dependency Versions:
+      %dd
+        %ul
+          :each dependency in article.dependencies
             %li
-              %a{href: "/" + related.name}&=related.title
-              :if related.node
-                %span.versiontag&= related.node
+              %a{ href: "http://github.com/creationix/haml-js/tree/8ea2df3a90ff488ed253d5872e0f4a387f393e5d" }
+                haml-js v0.2.2
 
-  
+  :if article.uniqueSnippets
+    %dl
+      %dt
+        Code Samples:
+      %dd
+        %ul
+          :each base, snippet in article.uniqueSnippets
+            %li
+              %a{ href: snippet.filename}
+                &= base
+
+
+  :if article.related && article.related.length > 0
+   %h4 from the author
+   %ul
+      :each related in article.related
+        %li
+          %a{href: "/" + related.name}&=related.title
+          :if related.node
+            %span.versiontag&= related.node
+
+
+.content.article
+  :if article.version
+    %a.sha-version{ href: "/#{article.version}/#{article.name}" } Static Version
+  %h1
+    #{article.title}
+    %p by
+      %a(href="http://www.twitter.com/#{article.author.twitter}")> #{article.author.name}
+      on 
+      &= formatDate(article.date, "%A, %B %e, %Y")
+
+  = markdownEncode(article.markdown)
+  %hr{style:"clear:both"}
+  #disqus_thread.body
+  :script
+    var disqus_url = "http://www.letsnode.com/#{article.name}";
+  %script(src="http://disqus.com/forums/letsnodecom/embed.js" type="text/javascript")
+  %a(href="http://disqus.com/forums/letsnodecom/?url=ref")
+    View the discussion thread.
+  %a.dsq-brlink(href="http://disqus.com")
+    blog comments powered by
+    %span.logo-disqus
+      Disqus
+  :script
+    (function() {
+      var links = document.getElementsByTagName('a');
+      var query = '?';
+      for(var i = 0; i < links.length; i++) {
+        if(links[i].href.indexOf('#disqus_thread') >= 0) {
+          query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&amp;';
+        }
+      }
+      document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/howtonodeorg/get_num_replies.js' + query + '"></' + 'script>');
+    })();
+
+   :script
+     SyntaxHighlighter.all()

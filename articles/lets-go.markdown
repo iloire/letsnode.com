@@ -1,4 +1,4 @@
-Title: intro: Let's move!
+Title: Let's move!
 Author: Ivan Loire
 Date: Wed Sept 27 2011 12:15:53 GMT-0700 (PDT)
 

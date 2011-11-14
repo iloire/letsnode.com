@@ -1,23 +1,24 @@
-%div.content
+%div.index
   %div.hero-unit
-    %h2 Let's node!
+    <img style="float:right" src="/images/node_logo.png" width="200">
+    %h2 Let's node!. A blog about node.js and express.js
     %p node.js: Evented I/O for 
       %a{href: "http://code.google.com/p/v8/"} &nbsp;V8 JavaScript
-  .row
+
+  .colcontainer
     :each article in articles.slice(0,1)
-      .span7
+      .colhome
         %h3 last article: #{article.title}
         %p by&nbsp;
           %a{href: "http://www.twitter.com/" + article.author.twitter}  #{article.author.name}
           &nbsp;on #{formatDate(article.date, "%Y.%m.%d")}
-        %p .date{title: article.date}&= formatDate(article.date, "%Y.%m.%d")
           %p
             = intro(article.markdown)
           %a{href: "/" + article.name} Read more...
 
-     .span5
+     .colhome
        = markdownEncode(description)
-     .span4
+     .colhome
        %h3 All articles
        %ul
          - var first=true
@@ -25,3 +26,4 @@
            %li
              %a{href: "/" + article.name}&=article.title
              &=" by " + article.author.name
+     .clear

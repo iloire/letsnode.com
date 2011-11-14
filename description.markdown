@@ -6,7 +6,7 @@ This blog is based on [howtonode][]. Howtonode's source code is available on [ho
 
 The source code of this blog is also available on [letsnode's github repository]. I pretty much added the [Twitter BootStrap CSS library] to the blog 
 
-I will be posting here experiences and code of real projects I am developing by using node.js, express.js and NoSql databases like redis.
+I will be posting here experiences and code of real projects I am developing by using node.js, express.js and NoSql databases like REDIS.
 
 Hope you also enjoy working with node as I do..	
 
