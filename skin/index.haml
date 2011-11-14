@@ -6,21 +6,27 @@
       %a{href: "http://code.google.com/p/v8/"} &nbsp;V8 JavaScript
 
   .colcontainer
+    .colhome
+      %h3 About this blog
+      .alert-message.warning
+        = markdownEncode(description)
+
     :each article in articles.slice(0,1)
       .colhome
-        %h3 last article: #{article.title}
-        %p by&nbsp;
-          %a{href: "http://www.twitter.com/" + article.author.twitter}  #{article.author.name}
-          &nbsp;on #{formatDate(article.date, "%Y.%m.%d")}
-          %p
-            = intro(article.markdown)
-          %a{href: "/" + article.name} Read more...
+        %h3 Latest article published
+        .alert-message.block-message.success
+          %h5 #{article.title}
+          %p by&nbsp;
+            %a{href: "http://www.twitter.com/" + article.author.twitter}  #{article.author.name}
+            &nbsp;on #{formatDate(article.date, "%Y.%m.%d")}
+            %p
+              = intro(article.markdown)
+            %a.btn{href: "/" + article.name} Read more...
+
 
      .colhome
-       = markdownEncode(description)
-     .colhome
-       %h3 All articles
-       %ul
+       %h3 Articles
+       %ul.articles
          - var first=true
          :each article in articles.slice(0,20)
            %li

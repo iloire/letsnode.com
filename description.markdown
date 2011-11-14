@@ -1,14 +1,13 @@
-### About this blog
+This blog **is about node.js**
 
-This blog **is about node.js** and the cool stuff you can do with it.
+It is based on [howtonode][] (howtonode's source code is available on [howtonode's github repository][])
 
-This blog is based on [howtonode][]. Howtonode's source code is available on [howtonode's github repository][]
+The source code of this blog is also available on [letsnode's github repository].
 
-The source code of this blog is also available on [letsnode's github repository]. I pretty much added the [Twitter BootStrap CSS library] to the blog 
+##### Content of this blog
+I will be posting here experiences and code of real projects I am developing by using **node.js, express.js and NoSQL databases like REDIS**.
 
-I will be posting here experiences and code of real projects I am developing by using node.js, express.js and NoSql databases like REDIS.
-
-Hope you also enjoy working with node as I do..	
+Hope you also enjoy working with node.js as I do..	
 
 [howtonode]: https://howtonode.org
 [howtonode's github repository]: https://github.com/creationix/howtonode.org
