@@ -63,12 +63,12 @@ Node.js is fantastic for this kind of job. Since everything is async and non-blo
 	function ping (host, callback){
 		//do http request here.
 		//when finish, call "callback"
-		callback();
+		callback(status);
 	}
 
 	function query_host (host){
-		ping(host, function ({
-			..  do stuff like saving reponse in database, etc.
+		ping(host, function (status) {
+			//..  do stuff like saving status in database, etc.
 			setTimeout (query_host(host), 2000) //queue for next ping in the next predefined interval
 		}));
 	}
@@ -81,7 +81,7 @@ Node.js is fantastic for this kind of job. Since everything is async and non-blo
 
 </pre>
 
-By the async nature of node.js, where all **I/O is evented and asynchronous**, every ping request is issued and then **queued, waiting for response**. Once the response is received, the proper callback is called. There is no blocking code anywhere, and memorty footprint for an open socket is low, so your server can handle hundreds or thousands of requests per second easily :-)
+By the async nature of node.js, where all **I/O is evented and asynchronous**, every ping request is issued and then **queued, waiting for response**. Once the response is received, the proper callback is called. There is no blocking code anywhere, and memory footprint for an opened socket is low, so your server can handle hundreds or thousands of requests per second easily :-)
 
 **Try that with threads! :)**
 
