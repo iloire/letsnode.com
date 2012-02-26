@@ -5,31 +5,10 @@
     %p node.js: Evented I/O for 
       %a{href: "http://code.google.com/p/v8/"} &nbsp;V8 JavaScript
 
-  .colcontainer
-    .colhome
-      %h3 About this blog
-      .alert-message.warning
-        = markdownEncode(description)
-
-    :each article in articles.slice(0,1)
-      .colhome
-        %h3 Latest article published
-        .alert-message.block-message.success
-          %h5 #{article.title}
-          %p by&nbsp;
-            %a{href: "http://www.twitter.com/" + article.author.twitter}  #{article.author.name}
-            &nbsp;on #{formatDate(article.date, "%Y.%m.%d")}
-            %p
-              = intro(article.markdown)
-            %a.btn{href: "/" + article.name} Read more...
-
-
-     .colhome
-       %h3 Articles
-       %ul.articles
-         - var first=true
-         :each article in articles.slice(0,20)
-           %li
-             %a{href: "/" + article.name}&=article.title
-             &=" by " + article.author.name
-     .clear
+   %ul.articles
+     - var first=true
+     :each article in articles.slice(0,20)
+       %li
+          %h5 
+            %span.date #{formatDate(article.date, "%Y.%m.%d")} 
+            %a{href: "/" + article.name} #{article.title}
