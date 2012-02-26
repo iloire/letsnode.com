@@ -4,6 +4,10 @@ Date: Wed Nov 11 2011 12:15:53 GMT-0700 (PDT)
 
 I created a simple express.js application for the speech I gave at the [Libre Software World Conference](http://www.libresoftwareworldconference.com/) conference. I used [express.js](http://www.expressjs.com) as web framework and [knockout.js](http://knockoutjs.com/) for view-model binding. The REST service is using REDIS as database.
 
+<div class="alert alert-message">
+26/02/2012 <strong>Note</strong>:  This application has evolved to become <a target="_blank" href="http://directorio.cachirulovalley.com">directorio.cachirulovalley.com</a>. You can <a target="_blank" href="https://github.com/iloire/cachirulovalleydirectory">check the project in github.</a>
+</div>
+
 ## Steps to develop this simple app:
 
 <img src="express-and-knockout-example/demo1.png" style="float: none"></img>
@@ -98,7 +102,8 @@ The response (JSON format) is directly passed to the view-model that will render
 	
 ## Online demo
 
-Check the [online demo here](http://www.letsnode.com:8081)
+<strike>Check the [online demo here](http://www.letsnode.com:8081)</strike><br />
+Check <a target="_blank" href="http://directorio.cachirulovalley.com">directorio.cachirulovalley.com</a> better.
 
 ## Source code
 
