@@ -85,12 +85,12 @@ By the async nature of node.js, where all **I/O is evented and asynchronous**, e
 
 **Try that with threads! :)**
 
-## Real life example: Watchmen, HTTP monitor in Node.js 
+## Real life example: Watchmen, HTTP monitor in Node.js
 
-<img style="max-width:700px" src="https://github.com/iloire/WatchMen/raw/master/screenshots/list_hosts.png" style="float: none" />
+<img style="max-width:700px" src="https://raw.github.com/iloire/WatchMen/1.x/screenshots/list_hosts_v010.png" style="float: none" />
 
 
-I have created an HTTP Monitor in Node.js, so have a look at GitHub. 
+I have created an HTTP Monitor in Node.js, so have a look at GitHub.
 
 <div class="alert-message block-message warning">
 	<h3>Download HTTP monitor source code in GitHub</h3>
