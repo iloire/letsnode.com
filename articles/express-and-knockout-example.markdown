@@ -109,8 +109,7 @@ Check <a target="_blank" href="http://directorio.cachirulovalley.com">directorio
 
 You can find the source code in GitHub:
 <ul>
-	<li>[REST Service](https://github.com/iloire/FreelanceDirectory-Server) </li>
-	<li>[Web frontend](https://github.com/iloire/FreelanceDirectory-Web) </li>
+	<li>[Entire App](https://github.com/iloire/cachirulovalleydirectory) </li>
 		
 
 [journey]: https://github.com/cloudhead/journey
