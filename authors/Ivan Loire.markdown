@@ -1,11 +1,5 @@
 Email: ivan@iloire.com
 Github: iloire
 Twitter: ivanloire
-Location: Zaragoza (Spain)
+Location: Sydney (Australia)
 HomePage: http://iloire.com
-
-bla bla
-
-moroe bla
-
-bla
