@@ -1,12 +1,12 @@
 {
-  "author": "Tim Caswell <tim@creationix.com> (http://creationix.com/)",
-  "name": "howtonode.org",
-  "description": "The popular blog howto.no.de",
+  "author": "Ivan Loire <ivan@iloire.com> (http://iloire.com/)",
+  "name": "letsnode.com",
+  "description": "Let's node!. Based on howtonode.org",
   "version": "0.0.0",
-  "homepage": "http://howto.no.de/",
+  "homepage": "http://letsnode.com/",
   "repository": {
     "type": "git",
-    "url": "git://github.com/creationix/howtonode.org.git"
+    "url": "git://github.com/iloire/letsnode.com.git"
   },
   "engines": {
     "node": ">=0.4.0"
