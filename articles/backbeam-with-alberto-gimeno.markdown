@@ -31,7 +31,7 @@ We discovered a few great modules during the development. The apn module has bee
 
 It is a must for our cloud service to provide high availability so we wanted no downtimes during deploys. We also needed other features such as the ability to add SSL certificates on the fly without restarting anything. So we decided to create our own http proxy on top of the great node-http-proxy module from nodejitsu. Now we deploy new versions of backbeam and when they are ready we tell the proxy to redirect to the new instance ports. The old instances still serve the ongoing requests and a few minutes later we kill them. This way we have no downtimes and no requests are dropped.
 
-# Performance
+## Performance
 
 ### 1. Nodejs and redis are blazing fast. Could you give us some numbers about how fast backbeam is responding a request compared with other services?
 
