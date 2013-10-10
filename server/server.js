@@ -9,3 +9,5 @@ Http.createServer(Stack(
   Creationix.log(),
   require('wheat')(__dirname +"/..")
 )).listen(port);
+
+console.log('Server listening at port ' + port);
