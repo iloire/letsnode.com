@@ -2,7 +2,7 @@ Title: Developer interview: backbeam.io with Alberto Gimeno
 Author: Ivan Loire
 Date: Thu Oct 10 2013 12:15:53 GMT+0100
 
-[Alberto Gimeno](https://twitter.com/gimenete) is the founder of [backbeam.io](http://backbeam.io), a promissing high performance platform as a service build on nodejs. 
+<a href="https://twitter.com/gimenete" target="_blank">Alberto Gimeno</a> is the founder of <a href="http://backbeam.io" target="_blank">backbeam.io</a>, a promissing high performance platform as a service build on nodejs. 
 
 He has been keen to answer a few questions about backbeam internals. Enjoy!
 
@@ -67,9 +67,9 @@ Redis instances are launched on demand when projects are created.
 
 ### 2. Tell us a bit about redis and durability. It is my data safe with backbeam?
 
-Redis supports two persistence mechanisms: AOF (append-only-file) and snapshotting. In backbeam we use both to have the benefits of both of them. In summary AOF writes every single command executed in redis to a file so you can restore all the commands at any moment if the redis instance is shutted down for any reason. On the other hand snapshots have the benefit that they have the minimal size to preserve all the data. Nevertheless redis also supports rewriting the whole AOF file to create the minimal set of commands required to recreate the database. So they are two different approaches that have their pros and cons.
+Redis supports <a href="http://redis.io/topics/persistence" target="_blank" title="two persistence mechanisms">two persistence mechanisms</a>: AOF (append-only-file) and snapshotting. In backbeam we use both to have the benefits of both of them. In summary AOF writes every single command executed in redis to a file so you can restore all the commands at any moment if the redis instance is shutted down for any reason. On the other hand snapshots have the benefit that they have the minimal size to preserve all the data. Nevertheless redis also supports rewriting the whole AOF file to create the minimal set of commands required to recreate the database. So they are two different approaches that have their pros and cons.
 
-If you are worried for the durability of Redis data you should check this article from its creator: Redis persistence demystified. The main thing you should know is that modern operating systems do not actually save the data to disk when you write to the filesystem because the filesystem has several caching mechanisms to speed-up everything. The data is not saved on disk until you call fsync. For most SQL databases you need to tune some parameters to force fsync calls after each database operation if you need the highest durability. But this will decrease the performance of the database. Redis AOF let you tune this setting and we have this set to “everysec” so we have a great balance between speed and durability.
+If you are worried for the durability of Redis data you should check this article from its creator: <a href="http://oldblog.antirez.com/post/redis-persistence-demystified.html" target="_blank" title="Redis persistence demystified">Redis persistence demystified</a>. The main thing you should know is that modern operating systems do not actually save the data to disk when you write to the filesystem because the filesystem has several caching mechanisms to speed-up everything. The data is not saved on disk until you call fsync. For most SQL databases you need to tune some parameters to force fsync calls after each database operation if you need the highest durability. But this will decrease the performance of the database. Redis AOF let you tune this setting and we have this set to “everysec” so we have a great balance between speed and durability.
 
 ## Deployment
 
