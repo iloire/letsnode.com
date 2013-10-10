@@ -81,7 +81,7 @@ We have a simple yet powerful branching model in our git repository so we have b
 
 We are very careful with data so we develop features taking care of any database state. So the code behaves correctly regardless if the data was generated before or after the feature was deployed. If something fails thanks to our branching model and our deploy system we can quickly roll back to the previous state. We have only needed to do so for trivial problems such as usability issues in the control panel due to JavaScript or CSS edge cases.
 
-### 3. What's your approach on continuos integration and continous deployment? Do you have a build server? which one?
+### 3. What's your approach on continuos integration and continous delivery? Do you have a build server? which one?
 
 This is something we are working on. We do all the tests in our development machines and we have implemented a few tools to test the mobile SDKs (Android and iOS) from the command line. Our problem is that testing these SDKs in other environments is hard. For example we need to compile the iOS SDK in a Mac.
 
