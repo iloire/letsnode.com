@@ -43,7 +43,7 @@ We are going to do a migration to a cloud hosting that provides us the ability t
 
 ## Testing 
 
-### 1. Working with a dinamic languaje like Javascript requires a lot of (maybe extra) testing. Could you give us some numbers? How many tests do you have? How much coverage?
+### 1. Working with a dynamic language like Javascript requires a lot of (maybe extra) testing. Could you give us some numbers? How many tests do you have? How much coverage?
 
 We have thousands of tests. I don’t like to say an exact number because we like to test many things in each single test. People say that tests should only have one reason to fail as a good practice, but we like to test “flows”. For example if we want to test the “change password” functionality we execute the whole process of signup, confirm-password by email, login, change password.
 
