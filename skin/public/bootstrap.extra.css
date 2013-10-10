@@ -63,6 +63,7 @@ div.hero-unit p a{
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
+	max-height: 100px;
 }
 
 h1{
