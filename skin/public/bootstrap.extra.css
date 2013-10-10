@@ -6,6 +6,10 @@ body {
 	height:30px;
 }
 
+.topbar-inner {
+	padding:4px;
+}
+
 .topbar h3 a {
 	padding:5px 0px 7px 20px;
 }
@@ -18,7 +22,6 @@ body {
 }
 div.index{
 	top:-20px;
-	
 }
 
 div.hero-unit{
@@ -44,17 +47,24 @@ div.hero-unit p a{
 	text-decoration:underline;
 }
 
-
 .container-fluid > .content.article {
+	padding-top:10px;
 	margin-left: 0;
 	width:75%;
 }
 
 .container-fluid > .sidebar.article {
+	padding-top:10px;
 	float:right;	
 	width:22%;
 }
-	
+
+.container-fluid > .sidebar.article img.author {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
 h1{
 	margin-bottom:15px;
 	font-size:27px;
