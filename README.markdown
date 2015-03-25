@@ -9,6 +9,17 @@ The source code of this blog is also available on [letsnode's github repository]
 I will be posting here experiences and code of real projects I am developing by using node.js, express.js and NoSql databases like redis.
 
 Hope you also enjoy working with node as I do..	
+## Install
+
+```
+npm install
+```
+
+## Run
+
+```
+npm start
+```
 
 [howtonode]: https://howtonode.org
 [howtonode's github repository]: https://github.com/creationix/howtonode.org
